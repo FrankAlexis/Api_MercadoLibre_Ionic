@@ -1,14 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      API Mercado Libre
     </ion-title>
+    <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)"></ion-searchbar>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div >
+
+  </div>
+
+    <ion-list>
+        <ion-item *ngFor="let item of items">
+            <ion-thumbnail item-start>
+                <img [src]="item.thumbnail">
+              </ion-thumbnail>
+             <h2>{{item.title}}</h2>
+             <h4>${{item.price}}</h4>
+             <h4>{{item.address.city_name }}, {{item.address.state_name}}</h4>
+          </ion-item>
+    </ion-list>
 </ion-content>

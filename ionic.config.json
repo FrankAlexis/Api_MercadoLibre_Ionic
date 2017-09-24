@@ -1,5 +1,6 @@
 {
   "name": "Api_MercadoLibre",
   "app_id": "",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {}
 }
